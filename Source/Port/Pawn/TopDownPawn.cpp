@@ -284,8 +284,7 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 				AllTowers.RemoveAt(Index);
 				AllTowers.Insert(Tower, 0);
 			}
-
-			if(IsValid(Tower) == false)
+			else
 			{
 				return;
 			}

@@ -74,7 +74,7 @@ private:
 	// overlap에서 벗어난 actor의 색을 돌리기 위해서
 	TObjectPtr<AActor> PrevActor;
 	TArray<class AMyColorActor*> ColorActors;
-	TArray<ADragonCharacter*> AllTowers;
+	TArray<class ADragonCharacter*> AllTowers;
 	TSubclassOf <class ADragonCharacter> WhatToSpawn;
 
 	void ChangeColorCube(AActor* SelectedCube);

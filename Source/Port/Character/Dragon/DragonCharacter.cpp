@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Character/Dragon/DragonCharacter.h"
@@ -275,6 +275,12 @@ int ADragonCharacter::IsUpgradeable(const ADragonCharacter* Other)
 {
 	if ((AttackType == Other->GetAttackType()) && (TowerLevel == Other->GetTowerLevel()))
 	{
+		UE_LOG(LogClass, Log, TEXT("AttackType : %d"), static_cast<int>(AttackType));
+		UE_LOG(LogClass, Log, TEXT("TowerLevel : %d"), TowerLevel);
+
+		/*UE_LOG(LogClass, Log, TEXT("Other AttackType : %d"), static_cast<int>(Other->GetAttackType()));
+		UE_LOG(LogClass, Log, TEXT("Other TowerLevel : %d"), Other->GetTowerLevel());*/
+
 		return TowerLevel+1;
 	}
 

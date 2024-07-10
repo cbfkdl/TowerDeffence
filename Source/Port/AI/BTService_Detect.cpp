@@ -57,7 +57,7 @@ void UBTService_Detect::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 		{
 			//dragon npc로 한정지음
 			ADragonNonCharacter* Pawn = Cast<ADragonNonCharacter>(OverlapResult.GetActor());
-			if (Pawn )
+			if (IsValid(Pawn))
 			{
 				OwnerComp.GetBlackboardComponent()->SetValueAsObject("Target", Pawn);
 				DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Green, false, 0.2f);
