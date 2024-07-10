@@ -294,7 +294,7 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 			ADragonCharacter* DeleteActor = nullptr;
 			for (auto& _Tower : AllTowers)
 			{
-				if (_Tower == PrevCube->GetOnTower())
+				if (_Tower == Tower)
 				{
 					continue;
 				}
@@ -313,7 +313,8 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 					break;
 				}
 			}
-			if (IsValid(DeleteActor))
+			// IsValid로는 검출이 안됨
+			if (DeleteActor != nullptr)
 			{
 				AllTowers.Remove(DeleteActor);
 				DeleteActor = nullptr;

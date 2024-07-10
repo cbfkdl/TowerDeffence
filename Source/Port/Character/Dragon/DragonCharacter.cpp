@@ -278,8 +278,8 @@ int ADragonCharacter::IsUpgradeable(const ADragonCharacter* Other)
 		UE_LOG(LogClass, Log, TEXT("AttackType : %d"), static_cast<int>(AttackType));
 		UE_LOG(LogClass, Log, TEXT("TowerLevel : %d"), TowerLevel);
 
-		/*UE_LOG(LogClass, Log, TEXT("Other AttackType : %d"), static_cast<int>(Other->GetAttackType()));
-		UE_LOG(LogClass, Log, TEXT("Other TowerLevel : %d"), Other->GetTowerLevel());*/
+		UE_LOG(LogClass, Log, TEXT("Other AttackType : %d"), static_cast<int>(Other->GetAttackType()));
+		UE_LOG(LogClass, Log, TEXT("Other TowerLevel : %d"), Other->GetTowerLevel());
 
 		return TowerLevel+1;
 	}
