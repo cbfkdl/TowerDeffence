@@ -27,7 +27,7 @@ ATopDownPawn::ATopDownPawn()
 	IsBuildMode = false;
 	IsCompositedMode = false;
 	
-	// Ä«¸Ş¶ó ·çÆ®
+	// ì¹´ë©”ë¼ ë£¨íŠ¸
 	Scene = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
 	Scene->SetRelativeLocationAndRotation(FVector(30.0f, 0.0f, 2220.0f), FRotator(116.56f, -90.0f, -26.56f));
 	RootComponent = Scene;
@@ -120,7 +120,7 @@ void ATopDownPawn::Tick(float DeltaTime)
 			PlayerController->GetHitResultUnderCursorByChannel(UEngineTypes::ConvertToTraceType(ECC_Camera), true, Result);
 			IMyTowerCubeInterface* Cube = Cast<IMyTowerCubeInterface>(Result.GetActor());
 
-			// ¼±ÅÃµÈ°Ô Å¸¿ö ¿´¾ú´ÂÁö È®ÀÎ ÇÒ º¯¼ö
+			// ì„ íƒëœê²Œ íƒ€ì›Œ ì˜€ì—ˆëŠ”ì§€ í™•ì¸ í•  ë³€ìˆ˜
 			bool IsTower = false;
 
 			ADragonCharacter* Tower = Cast<ADragonCharacter>(Result.GetActor());
@@ -153,7 +153,7 @@ void ATopDownPawn::Tick(float DeltaTime)
 			PlayerController->GetHitResultUnderCursorByChannel(UEngineTypes::ConvertToTraceType(ECC_Camera), true, Result);
 			IMyTowerCubeInterface* Cube = Cast<IMyTowerCubeInterface>(Result.GetActor());
 
-			// ¼±ÅÃµÈ°Ô Å¸¿ö ¿´¾ú´ÂÁö È®ÀÎ ÇÒ º¯¼ö
+			// ì„ íƒëœê²Œ íƒ€ì›Œ ì˜€ì—ˆëŠ”ì§€ í™•ì¸ í•  ë³€ìˆ˜
 			bool IsTower = false;
 
 			ADragonCharacter* Tower = Cast<ADragonCharacter>(Result.GetActor());
@@ -241,7 +241,7 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 				}
 				else
 				{
-					// °ñµå°¡ ºÎÁ·ÇÔ
+					// ê³¨ë“œê°€ ë¶€ì¡±í•¨
 					return;
 				}
 
@@ -278,16 +278,11 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 			ADragonCharacter* Tower = Cast<ADragonCharacter>(PrevCube->GetOnTower());
 			if(IsValid(Tower))
 			{
-				// Ã¹¹øÂ°  ¼ø¼­·Î ¿Å±â±â
+				// ì²«ë²ˆì§¸  ìˆœì„œë¡œ ì˜®ê¸°ê¸°
 				int TowerCount = 0;
 				int32 Index = AllTowers.Find(Tower);
 				AllTowers.RemoveAt(Index);
 				AllTowers.Insert(Tower, 0);
-			}
-
-			if(IsValid(Tower) == false)
-			{
-				return;
 			}
 
 			EAttackType _AttackType = PrevCube->GetAttackType();
@@ -349,7 +344,7 @@ void ATopDownPawn::BuildRnadomActorReleased(const FInputActionValue& Value)
 void ATopDownPawn::Destroy(const FInputActionValue& Value)
 {
 	UE_LOG(LogClass, Log, TEXT("Destroy In"));
-	// e´­·¯¼­ Å¸¿ö Áö¿ì°Ô ÇÏ±â
+	// eëˆŒëŸ¬ì„œ íƒ€ì›Œ ì§€ìš°ê²Œ í•˜ê¸°
 }
 
 void ATopDownPawn::ChangeColorCube(AActor* SelectedCube)
