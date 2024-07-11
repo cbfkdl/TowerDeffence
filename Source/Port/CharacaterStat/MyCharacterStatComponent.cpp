@@ -1,4 +1,4 @@
-ï»¿// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "CharacaterStat/MyCharacterStatComponent.h"
@@ -22,7 +22,7 @@ void UMyCharacterStatComponent::InitializeComponent()
 	BaseStat.CharacterPower = 2000.0f;
 	InitEnergy(BaseStat.CharacterPower);
 
-	// íŒŒì›Œ ë ˆë²¨ì— ë”°ë¥¸ ì†ë„ ì„¤ì •
+	// ÆÄ¿ö ·¹º§¿¡ µû¸¥ ¼Óµµ ¼³Á¤
 	BaseStat.SpeedFactor = 0.75f;
 	BaseStat.BaseSpeed = 10.0f;
 }
