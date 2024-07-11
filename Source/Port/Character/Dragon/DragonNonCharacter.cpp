@@ -44,15 +44,6 @@ void ADragonNonCharacter::InitRoundStat(int Round)
 	GetCharacterMovement()->MaxWalkSpeed = Stat->GetMaxMovementSpeed();
 }
 
-//void ADragonNonCharacter::UpdateEnemyCount()
-//{
-//	AColorGameModeBase* pGameMode = GetWorld()->GetAuthGameMode<AColorGameModeBase>();
-//	if (pGameMode)
-//	{
-//		pGameMode->UpdateEnemyCount();
-//	}
-//}
-
 void ADragonNonCharacter::SetDead()
 {
 	Super::SetDead();
