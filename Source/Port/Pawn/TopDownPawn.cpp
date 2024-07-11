@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Pawn/TopDownPawn.h"
@@ -27,7 +27,7 @@ ATopDownPawn::ATopDownPawn()
 	IsBuildMode = false;
 	IsCompositedMode = false;
 	
-	// Ä«¸Ş¶ó ·çÆ®
+	// ç§»ëŒ€ì°“??çŒ·â‘¦ë“ƒ
 	Scene = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
 	Scene->SetRelativeLocationAndRotation(FVector(30.0f, 0.0f, 2220.0f), FRotator(116.56f, -90.0f, -26.56f));
 	RootComponent = Scene;
@@ -120,7 +120,7 @@ void ATopDownPawn::Tick(float DeltaTime)
 			PlayerController->GetHitResultUnderCursorByChannel(UEngineTypes::ConvertToTraceType(ECC_Camera), true, Result);
 			IMyTowerCubeInterface* Cube = Cast<IMyTowerCubeInterface>(Result.GetActor());
 
-			// ¼±ÅÃµÈ°Ô Å¸¿ö ¿´¾ú´ÂÁö È®ÀÎ ÇÒ º¯¼ö
+			// ?ì¢ê¹®?ì’“ì¾¶ ?Â€???Â€?ëˆë’—ï§Â€ ?ëº¤ì”¤ ??è¹‚Â€??
 			bool IsTower = false;
 
 			ADragonCharacter* Tower = Cast<ADragonCharacter>(Result.GetActor());
@@ -153,7 +153,7 @@ void ATopDownPawn::Tick(float DeltaTime)
 			PlayerController->GetHitResultUnderCursorByChannel(UEngineTypes::ConvertToTraceType(ECC_Camera), true, Result);
 			IMyTowerCubeInterface* Cube = Cast<IMyTowerCubeInterface>(Result.GetActor());
 
-			// ¼±ÅÃµÈ°Ô Å¸¿ö ¿´¾ú´ÂÁö È®ÀÎ ÇÒ º¯¼ö
+			// ?ì¢ê¹®?ì’“ì¾¶ ?Â€???Â€?ëˆë’—ï§Â€ ?ëº¤ì”¤ ??è¹‚Â€??
 			bool IsTower = false;
 
 			ADragonCharacter* Tower = Cast<ADragonCharacter>(Result.GetActor());
@@ -241,7 +241,7 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 				}
 				else
 				{
-					// °ñµå°¡ ºÎÁ·ÇÔ
+					// æ€¨â‘¤ë±¶åª›Â€ éºÂ€è­°ê¹Šë¸¿
 					return;
 				}
 
@@ -278,16 +278,19 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 			ADragonCharacter* Tower = Cast<ADragonCharacter>(PrevCube->GetOnTower());
 			if(IsValid(Tower))
 			{
-				// Ã¹¹øÂ°  ¼ø¼­·Î ¿Å±â±â
+				// ï§£ãƒ«ì¾²ï§? ?ì’–ê½Œæ¿¡???ë¦°æ¹²?
 				int TowerCount = 0;
 				int32 Index = AllTowers.Find(Tower);
 				AllTowers.RemoveAt(Index);
 				AllTowers.Insert(Tower, 0);
 			}
+<<<<<<< HEAD
 			else
 			{
 				return;
 			}
+=======
+>>>>>>> 462f7dff5434b7a54435386500d542bf0f072968
 
 			EAttackType _AttackType = PrevCube->GetAttackType();
 			int UpgradeLevel = 0;
@@ -313,7 +316,7 @@ void ATopDownPawn::BuildRnadomActor(const FInputActionValue& Value)
 					break;
 				}
 			}
-			// IsValid·Î´Â °ËÃâÀÌ ¾ÈµÊ
+			// IsValidë¡œëŠ” ê²€ì¶œì´ ì•ˆë¨
 			if (DeleteActor != nullptr)
 			{
 				AllTowers.Remove(DeleteActor);
@@ -349,7 +352,7 @@ void ATopDownPawn::BuildRnadomActorReleased(const FInputActionValue& Value)
 void ATopDownPawn::Destroy(const FInputActionValue& Value)
 {
 	UE_LOG(LogClass, Log, TEXT("Destroy In"));
-	// e´­·¯¼­ Å¸¿ö Áö¿ì°Ô ÇÏ±â
+	// e?ëš®ìœ­???Â€??ï§Â€?ê³Œì¾¶ ?ì„ë¦°
 }
 
 void ATopDownPawn::ChangeColorCube(AActor* SelectedCube)

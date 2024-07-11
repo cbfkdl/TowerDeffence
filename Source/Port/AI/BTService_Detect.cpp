@@ -55,7 +55,7 @@ void UBTService_Detect::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 	{
 		for (auto const& OverlapResult : OverlapResults)
 		{
-			//dragon npc·Î ÇÑÁ¤ÁöÀ½
+			//dragon npcë¡œ í•œì •ì§€ìŒ
 			ADragonNonCharacter* Pawn = Cast<ADragonNonCharacter>(OverlapResult.GetActor());
 			if (IsValid(Pawn))
 			{

@@ -38,7 +38,7 @@ class PORT_API ATopDownPawn : public APawn ,public IMyTowerHUDInterface
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* DestroyAction;
 
-	/* ÁÂÅ¬ */
+	/* ì¢Œí´ */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LeftClickAction;
 
@@ -71,7 +71,7 @@ private:
 	bool IsBuildMode;
 	bool IsCompositedMode;
 
-	// overlap¿¡¼­ ¹ş¾î³­ actorÀÇ »öÀ» µ¹¸®±â À§ÇØ¼­
+	// overlapì—ì„œ ë²—ì–´ë‚œ actorì˜ ìƒ‰ì„ ëŒë¦¬ê¸° ìœ„í•´ì„œ
 	TObjectPtr<AActor> PrevActor;
 	TArray<class AMyColorActor*> ColorActors;
 	TArray<class ADragonCharacter*> AllTowers;
